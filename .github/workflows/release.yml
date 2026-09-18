@@ -16,7 +16,9 @@ jobs:
           - os: windows-latest
             artifact: 'release/*.exe'
           - os: ubuntu-latest
-            artifact: 'release/*.{AppImage,deb}'
+            artifact: |
+              release/*.AppImage
+              release/*.deb
           - os: macos-latest
             artifact: 'release/*.dmg'
     runs-on: ${{ matrix.os }}
@@ -36,6 +38,8 @@ jobs:
           mkdir -p native/bin
           if [[ "${{ runner.os }}" == "Windows" ]]; then g++ -std=c++17 native/launcher.cpp -o native/bin/fastaccses-launcher.exe; else g++ -std=c++17 native/launcher.cpp -o native/bin/fastaccses-launcher; fi
       - name: Package application
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
         run: npm run build
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
