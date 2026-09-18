@@ -1,0 +1,30 @@
+{
+  "name": "fastaccses",
+  "version": "1.0.0",
+  "description": "A simple local launcher for files, folders, and applications.",
+  "main": "src/main.js",
+  "author": "FastAccses",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/ziroxisnothere/FastAccses.git" },
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder",
+    "build:dir": "electron-builder --dir"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.fastaccses.launcher",
+    "productName": "FastAccses",
+    "asar": true,
+    "files": ["src/**/*", "native/**/*", "package.json"],
+    "directories": { "output": "release" },
+    "win": { "target": ["nsis", "portable"] },
+    "linux": { "target": ["AppImage", "deb"], "category": "Utility" },
+    "mac": { "target": ["dmg"] }
+  }
+}
