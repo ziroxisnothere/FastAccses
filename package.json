@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple local launcher for files, folders, and applications.",
   "main": "src/main.js",
-  "author": "FastAccses",
+  "author": { "name": "FastAccses", "email": "hello@fastaccses.app" },
   "license": "MIT",
   "repository": { "type": "git", "url": "https://github.com/ziroxisnothere/FastAccses.git" },
   "scripts": {
