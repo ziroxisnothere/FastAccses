@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FastAccses</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FastAccses</title><link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="style.css"></head>
 <body>
   <main class="app-shell">
     <header class="topbar"><div class="brand"><div class="brand-mark">F</div><div><h1>FastAccses</h1><p>Local launcher</p></div></div><button id="addBtn" class="primary">+ Add shortcut</button></header>
@@ -8,6 +8,6 @@
     <section class="content"><div class="section-heading"><div><h3>Your shortcuts</h3><p id="countLabel">0 items saved locally</p></div><button id="clearBtn" class="text-btn">Clear all</button></div><div id="grid" class="shortcut-grid"></div><div id="empty" class="empty"><div class="empty-icon">⌁</div><h3>Your launchpad is empty</h3><p>Add an application, file, or folder to get started.</p><button id="emptyAddBtn" class="secondary">Add your first shortcut</button></div></section>
     <footer><span>FastAccses · Local storage only</span><span id="status">All changes saved</span></footer>
   </main>
-  <dialog id="modal"><form method="dialog" id="shortcutForm"><div class="modal-head"><div><span class="eyebrow">NEW SHORTCUT</span><h2>Add a shortcut</h2></div><button value="cancel" class="close">×</button></div><label>Display name<input id="nameInput" required placeholder="e.g. Work folder"></label><label>Path<input id="pathInput" required placeholder="C:\\Apps\\MyApp.exe or /home/user/file"/><div class="path-actions"><button type="button" id="fileBtn" class="secondary">Choose file</button><button type="button" id="folderBtn" class="secondary">Choose folder</button></div></label><label>Icon / emoji<input id="iconInput" maxlength="2" value="⚡" placeholder="⚡"/></label><div class="modal-actions"><button value="cancel" class="secondary">Cancel</button><button id="saveBtn" value="default" class="primary">Save shortcut</button></div></form></dialog>
+  <dialog id="modal"><form method="dialog" id="shortcutForm"><div class="modal-head"><div><span class="eyebrow">NEW SHORTCUT</span><h2>Add a shortcut</h2></div><button value="cancel" class="close">×</button></div><label>Display name<input id="nameInput" required placeholder="e.g. Work folder"></label><label>Path<input id="pathInput" required placeholder="C:\\Apps\\MyApp.exe or /home/user/file"/><div class="path-actions"><button type="button" id="fileBtn" class="secondary">Choose file</button><button type="button" id="folderBtn" class="secondary">Choose folder</button></div></label><label>Icon<input id="iconInput" type="hidden" value="fa-solid fa-bolt"/><div id="iconPicker" class="icon-picker"></div></label><div class="modal-actions"><button value="cancel" class="secondary">Cancel</button><button id="saveBtn" value="default" class="primary">Save shortcut</button></div></form></dialog>
   <script src="renderer.js"></script>
 </body></html>

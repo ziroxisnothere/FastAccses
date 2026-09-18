@@ -1,18 +1,26 @@
 {
   "name": "fastaccses",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple local launcher for files, folders, and applications.",
   "main": "src/main.js",
-  "author": { "name": "FastAccses", "email": "hello@fastaccses.app" },
+  "author": {
+    "name": "FastAccses",
+    "email": "hello@fastaccses.app"
+  },
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/ziroxisnothere/FastAccses.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ziroxisnothere/FastAccses.git"
+  },
   "scripts": {
     "start": "electron .",
     "dev": "electron .",
     "build": "electron-builder --publish never",
     "build:dir": "electron-builder --dir --publish never"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2"
+  },
   "devDependencies": {
     "electron": "^36.3.1",
     "electron-builder": "^26.0.12"
@@ -21,10 +29,31 @@
     "appId": "com.fastaccses.launcher",
     "productName": "FastAccses",
     "asar": true,
-    "files": ["src/**/*", "native/**/*", "package.json"],
-    "directories": { "output": "release" },
-    "win": { "target": ["nsis", "portable"] },
-    "linux": { "target": ["AppImage", "deb"], "category": "Utility" },
-    "mac": { "target": ["dmg"] }
+    "files": [
+      "src/**/*",
+      "native/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    }
   }
 }
