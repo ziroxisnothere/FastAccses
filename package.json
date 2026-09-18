@@ -9,8 +9,8 @@
   "scripts": {
     "start": "electron .",
     "dev": "electron .",
-    "build": "electron-builder",
-    "build:dir": "electron-builder --dir"
+    "build": "electron-builder --publish never",
+    "build:dir": "electron-builder --dir --publish never"
   },
   "dependencies": {},
   "devDependencies": {
